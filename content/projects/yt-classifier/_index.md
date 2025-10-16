@@ -1,7 +1,58 @@
 +++
 title = "YouTube Comment Classifier"
-description = "A DistilBERT model that classifies YouTube comments by sentiment"
 +++
+
+<hr>
+
+## 🧠 Try It Yourself
+
+<iframe
+	src="https://azande7-yt-sentiment-demo.hf.space"
+	frameborder="0"
+	width="850"
+	height="450"
+  scrolling="no"
+></iframe>
+
+## Example Prompts: (Encouraged to try your own!)
+**Easy** (Clear Sentiment)  
+These are simple and direct.
+- "This video was amazing! Learned so much ❤️”
+- “Bro this deserves way more views.”
+- “The editing and pacing were perfect!”
+- “This was a complete waste of time.”
+- “Why did I even click on this?”
+- “Terrible audio, couldn’t even finish watching.”
+- "This video is 10 minutes long.”
+- “Uploaded on October 16th.”
+- “I came here after seeing the thumbnail.”
+
+**Moderate** (Emotional Tone or Slightly Ambiguous)  
+These require the model to pay attention to emotion and context.  
+- “Didn’t expect to like it, but this was actually really good.”
+- “You can tell they put real effort into this.”
+- “I mean… it’s fine, but definitely not great.”
+- “Could have been better. Not what I hoped for.”
+- “I’m not sure how to feel about this.”
+- “The topic is interesting but poorly explained.”
+
+**Tricky** (Sarcasm, Mixed Emotions, or Subtle Negativity)  
+These test how well the model understands nuance. 
+- “Oh wow, another completely original reaction video 🙄.”
+- “Just what the internet needed… more unboxing videos.”
+- “Good visuals, but the message didn’t land.”
+- “Loved the first half, but it totally fell apart at the end.”
+- “Not really my thing, but I can see why people like it.”
+- “Nice effort, though the execution could use some work.”
+
+**Difficult** (Irony, Context, or Complex Sentiment)  
+These are the toughest! 
+- “Yeah, because *that’s* definitely how physics works.”
+- “Great, another expert telling me how to live my life.”
+- “This aged like milk.”
+- “Can’t believe this is still relevant in 2025.”
+- “I’m happy for them, but man this video made me sad.”
+- "It’s so bad it’s actually kind of funny.”
 
 ## Overview
 
@@ -87,35 +138,3 @@ https://huggingface.co/azande7/yt-sentiment-model
 Link to the dataset: (https://www.kaggle.com/datasets/atifaliak/youtube-comments-dataset)
 
 ---
-
-## Try It Yourself
-
-Enter a YouTube comment below to see how the model classifies it.
-
-<div class="classifier-demo">
-  <textarea id="userInput" rows="3" placeholder="Type a YouTube comment..." style="width:100%;padding:10px;border-radius:8px;border:none;margin-top:10px;"></textarea>
-  <br>
-  <button onclick="classifyComment()" style="margin-top:10px;padding:8px 14px;border:none;border-radius:8px;background:#a78bfa;color:white;font-weight:bold;cursor:pointer;">
-    Classify
-  </button>
-
-  <p id="result" style="margin-top:1rem;font-weight:bold;"></p>
-</div>
-
-<script>
-async function classifyComment() {
-  const input = document.getElementById('userInput').value;
-  const resultElement = document.getElementById('result');
-
-  resultElement.textContent = 'Analyzing...';
-
-  const response = await fetch("https://api-inference.huggingface.co/models/azande7/yt-sentiment-model", {
-    headers: { "Authorization": "Bearer $HUGGINGFACE_TOKEN" },
-    method: "POST",
-    body: JSON.stringify({ inputs: input }),
-  });
-
-  const data = await response.json();
-  resultElement.textContent = `Prediction: ${data[0][0].label} (Confidence: ${(data[0][0].score * 100).toFixed(2)}%)`;
-}
-</script>
