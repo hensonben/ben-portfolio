@@ -121,3 +121,5 @@ While BERT remains foundational to NLP, it has several known limitations:
 - **Computational cost:** Large models like BERT-Large require significant GPU/TPU resources.  
 - **Context limit:** The input length is capped at 512 tokens.  
 - **Non-generative:** BERT cannot generate new text; it only understands and classifies.  
+
+[← Back to previous page](/projects/yt-classifier/)

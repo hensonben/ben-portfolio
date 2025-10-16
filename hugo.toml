@@ -49,12 +49,18 @@ theme = "PaperMod"
     name = "Projects"
     url = "/projects/"
     weight = 3
-
+  
+  [[menu.main]]
+    identifier = "resources"
+    name = "Resources"
+    url = "/resources/"
+    weight = 4
+  
   [[menu.main]]
     identifier = "contact"
     name = "Contact"
     url = "/contact/"
-    weight = 4
+    weight = 5
 
 [markup.goldmark.renderer]
 unsafe = true
