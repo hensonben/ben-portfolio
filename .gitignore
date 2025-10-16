@@ -1,0 +1,5 @@
+hf_cache/
+public/
+resources/
+__pycache__/
+.DS_Store
