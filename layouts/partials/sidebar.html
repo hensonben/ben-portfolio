@@ -1,0 +1,13 @@
+<!-- layouts/partials/sidebar.html -->
+<div class="sidebar">
+  <ul>
+    <li><a href="/" class="{{ if eq .RelPermalink "/" }}active{{ end }}">Home</a></li>
+    <li><a href="/about/" class="{{ if eq .RelPermalink "/about/" }}active{{ end }}">About</a></li>
+    <li><a href="/projects/" class="{{ if eq .RelPermalink "/projects/" }}active{{ end }}">Projects</a></li>
+    <li><a href="/contact/" class="{{ if eq .RelPermalink "/contact/" }}active{{ end }}">Contact</a></li>
+  </ul>
+
+  <div class="sidebar-footer">
+    © 2025 Benjamin Henson
+  </div>
+</div>

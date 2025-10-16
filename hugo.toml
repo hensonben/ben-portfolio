@@ -1,0 +1,60 @@
+baseURL = "http://localhost:1313/"
+languageCode = "en-us"
+title = "Benjamin Henson"
+theme = "PaperMod"
+
+[params]
+  defaultTheme = "dark"
+  disableThemeToggle = true
+  math = true 
+[params.assets]
+  customCSS = ["css/custom.css"]
+
+[params.homeInfoParams]
+  Title = "Hi, I'm Benjamin Henson"
+  Content = "I study Data Science at the University of Pittsburgh, where I focus on analytics, visualization, and how data shapes decisions. I’m currently building projects that connect data, design, and everyday problem-solving."
+
+[[params.socialIcons]]
+  name = "github"
+  url = "https://github.com/hensonben"
+
+[[params.socialIcons]]
+  name = "linkedin"
+  url = "https://www.linkedin.com/in/hensonben/"
+
+[[params.socialIcons]]
+  name = "kaggle"
+  url = "https://www.kaggle.com/azande"
+
+[markup]
+  [markup.highlight]
+    style = "monokai"
+    
+[menu]
+
+  [[menu.main]]
+    identifier = "home"
+    name = "Home"
+    url = "/"
+    weight = 1
+
+  [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/about/"
+    weight = 2
+
+  [[menu.main]]
+    identifier = "projects"
+    name = "Projects"
+    url = "/projects/"
+    weight = 3
+
+  [[menu.main]]
+    identifier = "contact"
+    name = "Contact"
+    url = "/contact/"
+    weight = 4
+
+[markup.goldmark.renderer]
+unsafe = true

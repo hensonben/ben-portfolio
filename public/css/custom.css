@@ -1,0 +1,332 @@
+/* === Force PaperMod to use purple === */
+body.dark,
+[data-theme="dark"] {
+  --primary: #9E5AC4 !important;
+  --secondary: #B68CFF !important;
+  --tertiary: #C8A9FF !important;
+  --content: #9E5AC4 !important;
+  color: #9E5AC4 !important;
+}
+
+/* === Custom Lavender Theme Overrides (Clean + Final) === */
+
+body {
+  background-color: #0A0A0A !important;  /* Deep black background */
+  color: var(--primary) !important;       /* Your custom purple */
+  font-family: Arial, sans-serif !important;
+}
+
+/* Navigation Bar */
+header nav a,
+.menu__inner a {
+  color: #9E5AC4 !important;              /* Main lavender purple */
+  text-decoration: none;
+}
+
+header nav a:hover,
+.menu__inner a:hover {
+  color: #B68CFF !important;              /* Lighter lavender hover */
+  text-decoration: underline;
+}
+
+/* Links in body content */
+a {
+  color: #B68CFF !important;
+}
+
+a:hover {
+  color: #BFA1FF !important;
+  text-decoration: underline;
+}
+
+/* Page titles and headings */
+h1, h2, h3, h4, h5, h6 {
+  color: #BFA1FF !important;              /* Soft violet headers */
+  font-weight: bold;
+}
+
+/* Accent underline for headings */
+h1::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  background-color: #8A63CC;              /* Deep purple accent */
+  margin-top: 8px;
+  border-radius: 3px;
+}
+
+/* Section boxes / cards */
+.post-entry, .page {
+  background-color: #1E1E1E !important;   /* Graphite gray */
+  border-radius: 10px;
+  padding: 20px;
+  border: 1px solid #2D2D2D;
+}
+
+/* Footer */
+footer {
+  background-color: #0A0A0A !important;
+  color: #9E5AC4 !important;
+}
+/* === Sidebar Layout === */
+/* === Sidebar: Clean Final Version === */
+/* === Sidebar Styling (Finalized) === */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 180px;
+  background-color: #0A0A0A;
+  border-right: 1px solid #2D2D2D;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;      /* centers the links vertically */
+  align-items: flex-start;
+  padding-left: 40px;
+  z-index: 1000;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.sidebar li {
+  margin: 15px 0;
+}
+
+.sidebar a {
+  color: #B68CFF;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.sidebar a:hover {
+  color: #D7BFFF;
+  transform: translateX(4px);
+}
+
+.sidebar-footer {
+  position: absolute;
+  bottom: 25px;
+  left: 40px;
+  font-size: 0.85rem;
+  color: #7E5FBF;
+}
+
+.main {
+  margin-left: 220px;
+  padding: 40px;
+  transition: margin 0.3s ease;
+}
+
+/* === Highlight Active Link === */
+.sidebar a.active {
+  color: #E1C2FF; /* lighter purple glow */
+  font-weight: 600;
+  border-left: 3px solid #B68CFF;
+  padding-left: 10px;
+}
+
+/* === Responsive Sidebar (Mobile) === */
+@media screen and (max-width: 768px) {
+  .sidebar {
+    position: relative;
+    height: auto;
+    width: 100%;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    border-right: none;
+    border-bottom: 1px solid #2D2D2D;
+    padding: 10px 0;
+  }
+
+  .sidebar-footer {
+    display: none;
+  }
+
+  .main {
+    margin-left: 0;
+    padding: 25px;
+  }
+}
+/* === Clean Vertical Sidebar (Final Polished) === */
+header.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 140px;
+  background-color: #0A0A0A;
+  border-right: 1px solid #2D2D2D;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding-left: 25px;
+  z-index: 1000;
+}
+
+/* Stack links vertically */
+header.navbar ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+/* Link styling */
+header.navbar a {
+  color: #B68CFF;
+  font-size: 1.05rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+header.navbar a:hover {
+  color: #D7BFFF;
+  transform: translateX(4px);
+}
+
+/* Adjust main content */
+.main {
+  margin-left: 160px;
+  padding: 50px;
+}
+
+/* Optional: Label or logo above links */
+.nav-title {
+  font-size: 1.2rem;
+  color: #9E5AC4;
+  font-weight: 600;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+/* === Sidebar Fade-In Animation === */
+@keyframes slideInSidebar {
+  from {
+    transform: translateX(-30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+header.navbar {
+  animation: slideInSidebar 0.8s ease-out forwards;
+}
+/* === Responsive Collapse Sidebar to Top Bar === */
+@media screen and (max-width: 768px) {
+  header.navbar {
+    position: relative;
+    height: auto;
+    width: 100%;
+    border-right: none;
+    border-bottom: 1px solid #2D2D2D;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 12px 0;
+    animation: none; /* turn off animation on mobile */
+  }
+
+  header.navbar ul {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  header.navbar a {
+    font-size: 0.95rem;
+    transform: none !important;
+  }
+
+  .main {
+    margin-left: 0;
+    padding: 25px;
+  }
+
+  .nav-title {
+    display: none; /* optional: hide initials/name on mobile */
+  }
+}
+/* === Normalize About Page Typography === */
+.page h1 {
+  font-size: 2rem !important;
+  font-weight: 700;
+  color: #BFA1FF;
+}
+
+.page h2 {
+  font-size: 1.4rem !important;
+  color: #B68CFF;
+  margin-top: 1.8em;
+  margin-bottom: 0.6em;
+}
+
+.page p {
+  font-size: 1.05rem !important;
+  line-height: 1.7 !important;
+  color: #C8A9FF !important;
+  margin-bottom: 1.2em !important;
+  max-width: 750px;
+}
+
+.page strong {
+  color: #E1C2FF;
+}
+
+.page em {
+  color: #B68CFF;
+}
+
+/* Optional: Soften transitions between sections */
+.page hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(to right, #6E3BBC, #B68CFF);
+  margin: 2em 0;
+}
+/* === Remove header anchor link icons in PaperMod === */
+.anchor {
+  display: none !important;
+}
+/* === Expand Main Content Width === */
+.main {
+  max-width: 1200px;      /* wider reading area */
+  width: 90%;             /* scale up to nearly full screen */
+  margin: 0 auto;         /* center horizontally */
+  padding: 50px;          /* keep spacing */
+  transition: all 0.3s ease;
+}
+
+@media screen and (min-width: 1600px) {
+  .main {
+    max-width: 1400px;    /* even wider for large monitors */
+  }
+}
+/* === Full Width Layout Override for PaperMod === */
+.main {
+  max-width: none !important;
+  width: calc(100% - 220px) !important; /* subtract sidebar width */
+  margin-left: 220px !important;
+  padding: 50px 80px !important;
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 768px) {
+  .main {
+    width: 100% !important;
+    margin-left: 0 !important;
+    padding: 25px !important;
+  }
+}

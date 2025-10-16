@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en" dir="auto">
+
+<head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script><meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+<meta name="robots" content="noindex, nofollow">
+<title>More on BERT | Benjamin Henson</title>
+<meta name="keywords" content="">
+<meta name="description" content="What Was BERT Pretrained On?
+BERT was pretrained on two major English text datasets:
+
+
+English Wikipedia — approximately 2.5 billion words (plain text only — no lists, tables, or markup).
+
+
+BookCorpus — around 800 million words drawn from ~11,000 unpublished/self-published books, providing long-form narrative and conversational language.
+
+
+Because of this training, BERT was exposed to:
+
+A wide range of topics (science, fiction, general knowledge)
+Real English grammar and semantic variety
+Both formal (encyclopedic) and informal (narrative) writing styles
+
+
+Pretraining Objectives
+During pretraining, BERT learns by solving two self-supervised tasks:">
+<meta name="author" content="">
+<link rel="canonical" href="http://localhost:1313/projects/yt-classifier/_bert-info/">
+<link crossorigin="anonymous" href="/assets/css/stylesheet.a090830a421002426baafbd314e38f149d77b4c48a12ee9312700d770b27fb26.css" integrity="sha256-oJCDCkIQAkJrqvvTFOOPFJ13tMSKEu6TEnANdwsn&#43;yY=" rel="preload stylesheet" as="style">
+<link rel="icon" href="http://localhost:1313/favicon.ico">
+<link rel="icon" type="image/png" sizes="16x16" href="http://localhost:1313/favicon-16x16.png">
+<link rel="icon" type="image/png" sizes="32x32" href="http://localhost:1313/favicon-32x32.png">
+<link rel="apple-touch-icon" href="http://localhost:1313/apple-touch-icon.png">
+<link rel="mask-icon" href="http://localhost:1313/safari-pinned-tab.svg">
+<meta name="theme-color" content="#2e2e33">
+<meta name="msapplication-TileColor" content="#2e2e33">
+<link rel="alternate" hreflang="en" href="http://localhost:1313/projects/yt-classifier/_bert-info/">
+<noscript>
+    <style>
+        #theme-toggle,
+        .top-link {
+            display: none;
+        }
+    </style>
+</noscript>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css" crossorigin="anonymous">
+    <link rel="stylesheet" href="/css/custom.css" />
+<header class="navbar">
+  <ul>
+    <li><a href="/">Home</a></li>
+    <li><a href="/about/">About</a></li>
+    <li><a href="/projects/">Projects</a></li>
+    <li><a href="/contact/">Contact</a></li>
+  </ul>
+</header>
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.css" integrity="sha384-mLLfwC3roQoPCaC9HIcA3zD8uR+ymcU+nMMT+X2SVI33NnEw5e99bGyADf8p+8db" crossorigin="anonymous">
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/katex.min.js" integrity="sha384-z3bOTo6a5x1EdtSxRwLKtB3bWucCJQ2eN7qvJkMTvhvE8DaRUT8yqRpxW6fUR0Hk" crossorigin="anonymous"></script>
+
+
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.8/dist/contrib/auto-render.min.js" integrity="sha384-mllN6pFyz9ZxdpKxZBvTTQ9bRkOa5GqJycGP4sdFZbQvRkLMRnKx2y8c5jDqJemr" crossorigin="anonymous"
+    onload="renderMathInElement(document.body, {
+      delimiters: [
+        {left: '$$', right: '$$', display: true},
+        {left: '\\[', right: '\\]', display: true},
+        {left: '$', right: '$', display: false},
+        {left: '\\(', right: '\\)', display: false}
+      ],
+      throwOnError: false
+    });">
+</script>
+
+<script>
+window.MathJax = {
+  tex: {
+    inlineMath: [['$', '$'], ['\\(', '\\)']],
+    displayMath: [['$$', '$$'], ['\\[', '\\]']],
+    processEscapes: true,
+    processEnvironments: true,
+    tags: 'ams'
+  },
+  options: {
+    skipHtmlTags: ['script', 'noscript', 'style', 'textarea', 'pre', 'code']
+  },
+  svg: { fontCache: 'global' }
+};
+</script>
+<script async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+
+</head>
+
+<body class=" dark" id="top">
+
+
+    
+    <main class="main">
+
+<article class="post-single">
+  <header class="post-header">
+    
+    <h1 class="post-title entry-hint-parent">
+      More on BERT
+    </h1>
+    <div class="post-meta">
+
+</div>
+  </header> 
+  <div class="post-content"><h2 id="what-was-bert-pretrained-on">What Was BERT Pretrained On?<a hidden class="anchor" aria-hidden="true" href="#what-was-bert-pretrained-on">#</a></h2>
+<p><strong>BERT</strong> was pretrained on two major English text datasets:</p>
+<ol>
+<li>
+<p><strong>English Wikipedia</strong> — approximately <em>2.5 billion words</em> (plain text only — no lists, tables, or markup).</p>
+</li>
+<li>
+<p><strong>BookCorpus</strong> — around <em>800 million words</em> drawn from ~11,000 unpublished/self-published books, providing long-form narrative and conversational language.</p>
+</li>
+</ol>
+<p>Because of this training, BERT was exposed to:</p>
+<ul>
+<li>A wide range of topics (science, fiction, general knowledge)</li>
+<li>Real English grammar and semantic variety</li>
+<li>Both formal (encyclopedic) and informal (narrative) writing styles</li>
+</ul>
+<hr>
+<h2 id="pretraining-objectives">Pretraining Objectives<a hidden class="anchor" aria-hidden="true" href="#pretraining-objectives">#</a></h2>
+<p>During pretraining, BERT learns by solving two <strong>self-supervised tasks</strong>:</p>
+<h3 id="masked-language-modeling-mlm">Masked Language Modeling (MLM)<a hidden class="anchor" aria-hidden="true" href="#masked-language-modeling-mlm">#</a></h3>
+<p>Some words in a sentence are randomly replaced with a <code>[MASK]</code> token,<br>
+and BERT must predict the missing word using both left and right context.<br>
+This teaches deep understanding of grammar and meaning.</p>
+<blockquote>
+<p>“The cat sat on the ___.” &hellip; “mat”</p></blockquote>
+<p><a href="https://aclanthology.org/2021.emnlp-main.249.pdf">See More</a></p>
+<hr>
+<h3 id="next-sentence-prediction-nsp">Next Sentence Prediction (NSP)<a hidden class="anchor" aria-hidden="true" href="#next-sentence-prediction-nsp">#</a></h3>
+<p>BERT also learns whether one sentence logically follows another.<br>
+This helps it understand relationships between ideas rather than just individual sentences.</p>
+<blockquote>
+<p>Given the sentence, &ldquo;I made tea.&rdquo;, the next best guess would be, &ldquo;Then I poured it into the mug.&rdquo; Rather than an unrelated sentence like, &ldquo;The moon was bright last night.&rdquo;</p></blockquote>
+<h2 id="architecture-overview">Architecture Overview<a hidden class="anchor" aria-hidden="true" href="#architecture-overview">#</a></h2>
+<p>BERT is built entirely on the <strong>Transformer encoder</strong> architecture,<br>
+first introduced in the paper <em>“Attention Is All You Need”</em> (Vaswani et al., 2017).</p>
+<ul>
+<li>BERT uses multiple layers of Transformer encoders<br>
+(Base = 12 layers, Large = 24 layers).</li>
+<li>Each layer applies <strong>self-attention</strong>, which allows the model to understand the relationship between every word in a sentence.</li>
+<li>This <strong>bidirectional context</strong> is what makes BERT powerful —<br>
+unlike earlier models such as GPT (which read left-to-right) or RNNs (which process sequentially).</li>
+</ul>
+<p><a href="https://ai.googleblog.com/2018/11/open-sourcing-bert-state-of-art-pre.html">See More</a></p>
+<h2 id="model-variants">Model Variants<a hidden class="anchor" aria-hidden="true" href="#model-variants">#</a></h2>
+<table>
+  <thead>
+      <tr>
+          <th>Model</th>
+          <th>Layers</th>
+          <th>Hidden Size</th>
+          <th>Parameters</th>
+          <th>Notes</th>
+      </tr>
+  </thead>
+  <tbody>
+      <tr>
+          <td><strong>BERT-Base</strong></td>
+          <td>12</td>
+          <td>768</td>
+          <td>110M</td>
+          <td>Standard version for most NLP tasks</td>
+      </tr>
+      <tr>
+          <td><strong>BERT-Large</strong></td>
+          <td>24</td>
+          <td>1024</td>
+          <td>340M</td>
+          <td>Higher accuracy but computationally intensive</td>
+      </tr>
+      <tr>
+          <td><strong>DistilBERT</strong></td>
+          <td>6</td>
+          <td>768</td>
+          <td>66M</td>
+          <td>Lighter, faster, distilled from BERT-Base (<a href="https://arxiv.org/abs/1910.01108">See More</a>)</td>
+      </tr>
+  </tbody>
+</table>
+<p>Noteably, <strong>DistilBERT</strong>, used in my YouTube Comment Classifier project, retains roughly <strong>97% of BERT’s accuracy</strong> while running about <strong>60% faster</strong>.</p>
+<hr>
+<h2 id="fine-tuning-bert">Fine-Tuning BERT<a hidden class="anchor" aria-hidden="true" href="#fine-tuning-bert">#</a></h2>
+<p>BERT is not designed for one specific task as it is a <em>general-purpose language representation model</em>.<br>
+After pretraining, it can be <strong>fine-tuned</strong> for a variety of downstream tasks:</p>
+<ul>
+<li>Sentiment Analysis</li>
+<li>Named Entity Recognition (NER)</li>
+<li>Question Answering (e.g., SQuAD)</li>
+<li>Text Classification</li>
+<li>Natural Language Inference</li>
+</ul>
+<p>Fine-tuning usually adds a small output layer on top of BERT,<br>
+while the pretrained weights remain mostly unchanged.</p>
+<p><a href="https://arxiv.org/abs/1810.04805">See More</a></p>
+<hr>
+<h2 id="tokenization">Tokenization<a hidden class="anchor" aria-hidden="true" href="#tokenization">#</a></h2>
+<p>BERT uses <strong>WordPiece tokenization</strong>, which breaks uncommon words into smaller subword units.<br>
+This approach lets BERT handle rare or unseen words efficiently.</p>
+<p><strong>Example:</strong></p>
+<blockquote>
+<p>“unbelievable” → <code>[&quot;un&quot;, &quot;##bel&quot;, &quot;##ievable&quot;]</code></p></blockquote>
+<p><a href="https://www.tensorflow.org/text/guide/subwords_tokenizer">See More</a></p>
+<hr>
+<h2 id="benchmarks-and-performance">Benchmarks and Performance<a hidden class="anchor" aria-hidden="true" href="#benchmarks-and-performance">#</a></h2>
+<p>Upon release, BERT achieved state-of-the-art results on multiple NLP benchmarks:</p>
+<ul>
+<li><strong>GLUE</strong> – General Language Understanding Evaluation</li>
+<li><strong>SQuAD v1.1 and v2.0</strong> – Question Answering</li>
+<li><strong>SWAG</strong> – Commonsense Inference</li>
+</ul>
+<p>These results demonstrated BERT’s capability to generalize across many natural-language tasks.</p>
+<hr>
+<h2 id="limitations">Limitations<a hidden class="anchor" aria-hidden="true" href="#limitations">#</a></h2>
+<p>While BERT remains foundational to NLP, it has several known limitations:</p>
+<ul>
+<li><strong>Computational cost:</strong> Large models like BERT-Large require significant GPU/TPU resources.</li>
+<li><strong>Context limit:</strong> The input length is capped at 512 tokens.</li>
+<li><strong>Non-generative:</strong> BERT cannot generate new text; it only understands and classifies.</li>
+</ul>
+
+
+  </div>
+
+  <footer class="post-footer">
+    <ul class="post-tags">
+    </ul>
+  </footer>
+</article>
+    </main>
+
+    
+    
+<footer class="footer">
+        <span>&copy; 2025 <a href="http://localhost:1313/">Benjamin Henson</a></span> · 
+
+    <span>
+        Powered by
+        <a href="https://gohugo.io/" rel="noopener noreferrer" target="_blank">Hugo</a> &
+        <a href="https://github.com/adityatelange/hugo-PaperMod/" rel="noopener" target="_blank">PaperMod</a>
+    </span>
+</footer>
+<a href="#top" aria-label="go to top" title="Go to Top (Alt + G)" class="top-link" id="top-link" accesskey="g">
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 6" fill="currentColor">
+        <path d="M12 6H0l6-6z" />
+    </svg>
+</a>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.js" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/contrib/auto-render.min.js" crossorigin="anonymous" onload="renderMathInElement(document.body, {delimiters:[{left:'$$', right:'$$', display:true}, {left:'$', right:'$', display:false}, {left:'\\\\(', right:'\\\\)', display:false}, {left:'\\\\[', right:'\\\\]', display:true}]});"></script>
+
+<script>
+    let menu = document.getElementById('menu')
+    if (menu) {
+        menu.scrollLeft = localStorage.getItem("menu-scroll-position");
+        menu.onscroll = function () {
+            localStorage.setItem("menu-scroll-position", menu.scrollLeft);
+        }
+    }
+
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            var id = this.getAttribute("href").substr(1);
+            if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView({
+                    behavior: "smooth"
+                });
+            } else {
+                document.querySelector(`[id='${decodeURIComponent(id)}']`).scrollIntoView();
+            }
+            if (id === "top") {
+                history.replaceState(null, null, " ");
+            } else {
+                history.pushState(null, null, `#${id}`);
+            }
+        });
+    });
+
+</script>
+<script>
+    var mybutton = document.getElementById("top-link");
+    window.onscroll = function () {
+        if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+            mybutton.style.visibility = "visible";
+            mybutton.style.opacity = "1";
+        } else {
+            mybutton.style.visibility = "hidden";
+            mybutton.style.opacity = "0";
+        }
+    };
+
+</script>
+</body>
+</html>
