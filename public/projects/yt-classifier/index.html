@@ -11,7 +11,7 @@
 🧠 Try It Yourself
 
 Example Prompts: (Encouraged to try your own!)
-Easy (Clear Sentiment)
+Clear Sentiment | Average Confidence: 95%
 These are simple and direct.
 
 &ldquo;This video was amazing! Learned so much ❤️”
@@ -24,7 +24,7 @@ These are simple and direct.
 “Uploaded on October 16th.”
 “I came here after seeing the thumbnail.”
 
-Moderate (Emotional Tone or Slightly Ambiguous)
+Emotional Tone or Slightly Ambiguous | Average Confidence: 80%
 These require the model to pay attention to emotion and context.">
 <meta name="author" content="">
 <link rel="canonical" href="http://localhost:1313/projects/yt-classifier/">
@@ -116,8 +116,8 @@ window.MathJax = {
   scrolling="no"
 ></iframe>
 <h2 id="example-prompts-encouraged-to-try-your-own">Example Prompts: (Encouraged to try your own!)<a hidden class="anchor" aria-hidden="true" href="#example-prompts-encouraged-to-try-your-own">#</a></h2>
-<p><strong>Easy</strong> (Clear Sentiment)<br>
-These are simple and direct.</p>
+<h3 id="clear-sentiment--average-confidence-95">Clear Sentiment | Average Confidence: 95%<a hidden class="anchor" aria-hidden="true" href="#clear-sentiment--average-confidence-95">#</a></h3>
+<p>These are simple and direct.</p>
 <ul>
 <li>&ldquo;This video was amazing! Learned so much ❤️”</li>
 <li>“Bro this deserves way more views.”</li>
@@ -129,8 +129,8 @@ These are simple and direct.</p>
 <li>“Uploaded on October 16th.”</li>
 <li>“I came here after seeing the thumbnail.”</li>
 </ul>
-<p><strong>Moderate</strong> (Emotional Tone or Slightly Ambiguous)<br>
-These require the model to pay attention to emotion and context.</p>
+<h3 id="emotional-tone-or-slightly-ambiguous--average-confidence-80">Emotional Tone or Slightly Ambiguous | Average Confidence: 80%<a hidden class="anchor" aria-hidden="true" href="#emotional-tone-or-slightly-ambiguous--average-confidence-80">#</a></h3>
+<p>These require the model to pay attention to emotion and context.</p>
 <ul>
 <li>“Didn’t expect to like it, but this was actually really good.”</li>
 <li>“You can tell they put real effort into this.”</li>
@@ -139,8 +139,8 @@ These require the model to pay attention to emotion and context.</p>
 <li>“I’m not sure how to feel about this.”</li>
 <li>“The topic is interesting but poorly explained.”</li>
 </ul>
-<p><strong>Tricky</strong> (Sarcasm, Mixed Emotions, or Subtle Negativity)<br>
-These test how well the model understands nuance.</p>
+<h3 id="sarcasm-mixed-emotions-or-subtle-negativity--average-confidence-82">Sarcasm, Mixed Emotions, or Subtle Negativity | Average Confidence: 82%<a hidden class="anchor" aria-hidden="true" href="#sarcasm-mixed-emotions-or-subtle-negativity--average-confidence-82">#</a></h3>
+<p>These test how well the model understands nuance.</p>
 <ul>
 <li>“Oh wow, another completely original reaction video 🙄.”</li>
 <li>“Just what the internet needed… more unboxing videos.”</li>
@@ -148,16 +148,6 @@ These test how well the model understands nuance.</p>
 <li>“Loved the first half, but it totally fell apart at the end.”</li>
 <li>“Not really my thing, but I can see why people like it.”</li>
 <li>“Nice effort, though the execution could use some work.”</li>
-</ul>
-<p><strong>Difficult</strong> (Irony, Context, or Complex Sentiment)<br>
-These are the toughest!</p>
-<ul>
-<li>“Yeah, because <em>that’s</em> definitely how physics works.”</li>
-<li>“Great, another expert telling me how to live my life.”</li>
-<li>“This aged like milk.”</li>
-<li>“Can’t believe this is still relevant in 2025.”</li>
-<li>“I’m happy for them, but man this video made me sad.”</li>
-<li>&ldquo;It’s so bad it’s actually kind of funny.”</li>
 </ul>
 <h2 id="overview">Overview<a hidden class="anchor" aria-hidden="true" href="#overview">#</a></h2>
 <p>This project fine-tunes a <strong>DistilBERT Transformer</strong>model to classify YouTube comments into positive, neutral, or negative sentiments.

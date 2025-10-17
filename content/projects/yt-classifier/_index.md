@@ -15,7 +15,7 @@ title = "YouTube Comment Classifier"
 ></iframe>
 
 ## Example Prompts: (Encouraged to try your own!)
-**Easy** (Clear Sentiment)  
+### Clear Sentiment | Average Confidence: 95%   
 These are simple and direct.
 - "This video was amazing! Learned so much ❤️”
 - “Bro this deserves way more views.”
@@ -27,7 +27,7 @@ These are simple and direct.
 - “Uploaded on October 16th.”
 - “I came here after seeing the thumbnail.”
 
-**Moderate** (Emotional Tone or Slightly Ambiguous)  
+### Emotional Tone or Slightly Ambiguous | Average Confidence: 80%  
 These require the model to pay attention to emotion and context.  
 - “Didn’t expect to like it, but this was actually really good.”
 - “You can tell they put real effort into this.”
@@ -36,7 +36,7 @@ These require the model to pay attention to emotion and context.
 - “I’m not sure how to feel about this.”
 - “The topic is interesting but poorly explained.”
 
-**Tricky** (Sarcasm, Mixed Emotions, or Subtle Negativity)  
+### Sarcasm, Mixed Emotions, or Subtle Negativity | Average Confidence: 82%  
 These test how well the model understands nuance. 
 - “Oh wow, another completely original reaction video 🙄.”
 - “Just what the internet needed… more unboxing videos.”
@@ -45,14 +45,6 @@ These test how well the model understands nuance.
 - “Not really my thing, but I can see why people like it.”
 - “Nice effort, though the execution could use some work.”
 
-**Difficult** (Irony, Context, or Complex Sentiment)  
-These are the toughest! 
-- “Yeah, because *that’s* definitely how physics works.”
-- “Great, another expert telling me how to live my life.”
-- “This aged like milk.”
-- “Can’t believe this is still relevant in 2025.”
-- “I’m happy for them, but man this video made me sad.”
-- "It’s so bad it’s actually kind of funny.”
 
 ## Overview
 
