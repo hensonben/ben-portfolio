@@ -49,13 +49,13 @@ theme = "PaperMod"
     name = "Projects"
     url = "/projects/"
     weight = 3
-  
+
   [[menu.main]]
-    identifier = "resources"
-    name = "Resources"
-    url = "/resources/"
+    identifier = "coolstuff"
+    name = "stuff"
+    url = "/coolstuff/"
     weight = 4
-  
+
   [[menu.main]]
     identifier = "contact"
     name = "Contact"
