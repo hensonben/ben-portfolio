@@ -8,11 +8,11 @@
   </url><url>
     <loc>http://localhost:1313/categories/</loc>
   </url><url>
-    <loc>http://localhost:1313/coolstuff/</loc>
-  </url><url>
     <loc>http://localhost:1313/projects/opendesk/</loc>
   </url><url>
     <loc>http://localhost:1313/projects/</loc>
+  </url><url>
+    <loc>http://localhost:1313/about/aboutme/</loc>
   </url><url>
     <loc>http://localhost:1313/tags/</loc>
   </url><url>

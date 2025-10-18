@@ -1,3 +1,48 @@
+/* ===============================
+   Global Font Settings
+   =============================== */
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap');
+
+/* Apply globally */
+body {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
+  color: #eaeaea; /* optional: makes text softer on dark theme */
+}
+
+/* Headings */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+}
+
+/* Navigation */
+.nav a, .menu a {
+  font-family: "Inter", "Segoe UI", sans-serif;
+  text-transform: none;
+  letter-spacing: 0.02em;
+}
+/* Fine-tuned typography */
+h1 {
+  font-size: 2.4rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+}
+
+h2 {
+  font-size: 1.8rem;
+  font-weight: 600;
+}
+
+p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
 /* === Force PaperMod to use purple === */
 body.dark,
 [data-theme="dark"] {
@@ -13,7 +58,10 @@ body.dark,
 body {
   background-color: #0A0A0A !important;  /* Deep black background */
   color: var(--primary) !important;       /* Your custom purple */
-  font-family: Arial, sans-serif !important;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif !important;
+  line-height: 1.65;
+  letter-spacing: 0.01em;
 }
 
 /* Navigation Bar */
@@ -329,4 +377,11 @@ header.navbar {
     margin-left: 0 !important;
     padding: 25px !important;
   }
+}
+/* === FORCE FONT OVERRIDE === */
+html, body, .post-content, .page, .main, header, footer, nav, a, p, li, h1, h2, h3, h4, h5, h6, span, div {
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    "Helvetica Neue", Arial, sans-serif !important;
+  letter-spacing: 0.02em !important;
+  color: #eaeaea !important;
 }
